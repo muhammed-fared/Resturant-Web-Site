@@ -1,0 +1,128 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeFile="Site.Master.vb" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title>lokanta sayfası</title>
+    
+<!-- MetaTag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="description" content=" Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın">
+    <meta name="author" content="Najla Odeh">
+    <meta name="keywords" content="Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın" />
+ 
+    <meta name="description" content="">
+ 
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content=" Lokanta_sayfası">
+    <meta itemprop="description" content=" Lokanta sayfası  loknta bütün yemekleri">
+    <meta itemprop="image" content="https://en.wikipedia.org/wiki/Food">
+ 
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://en.wikipedia.org/wiki/Food">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="  Lokanta_sayfası">
+    <meta property="og:description" content="Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın  ">
+    <meta property="og:image" content="https://en.wikipedia.org/wiki/Food">
+ 
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" Lokanta_sayfası ">
+    <meta name="twitter:description" content=" Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın ">
+    <meta name="twitter:image" content="https://en.wikipedia.org/wiki/Food">
+<!-- MetaTag -->  
+    
+    
+    <link href="../Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+
+<!-- For menu -->
+<link href="../Styles/menu.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+<!-- -->
+    <link rel="shortcut icon" href="../assets/ico/fav.ico">
+</head>
+<body>
+    <form runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    lokanta sayfası
+                </h1>
+            </div>
+            <div class="loginDisplay">
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/lokanta_sayfasi.aspx" ID="HeadLoginStatus" runat="server"> giriş yap</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        hoş geldiniz  <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="çıkış yap " LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" style="float: right;" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="../aboutUs.aspx" Text="Site hakkında "/>
+
+                        <asp:MenuItem Text="lokanta_sayfası " Value="lokanta_sayfası " 
+                            NavigateUrl="~/lokanta_sayfasi.aspx"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="../index.aspx" Text="Ana sayfa"/>
+
+                    </Items>
+                </asp:Menu>
+            </div>
+        </div>
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+        </div>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+
+    <div class="footer">
+        
+    </div>
+
+
+    <asp:LoginView ID="LoginView1" runat="server">
+        <LoggedInTemplate>
+    
+    <!-- Menu --> 
+    <nav class="main-menu">
+        <div>
+            <a class="logo" href="http://startific.com">
+            </a> 
+        </div> 
+        <div class="settings"></div>
+        <div class="scrollbar" id="style-1">   
+        <ul>
+            <li>                                   
+               
+            </li> 
+        <li>   
+        <a href="">  
+         <i class="fa fa-sign-out"></i>                           
+            <span class="nav-text"><asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="çıkış yap " LogoutPageUrl="~/"/></span>
+        </a>
+        </li>  
+     <!-- -->  
+        </LoggedInTemplate>
+    </asp:LoginView>
+
+	<!-- js -->
+    <script src="../assets/js/jquery.js" type="text/javascript"></script>
+    <script src="../assets/js/bootstrap.js" type="text/javascript"></script>
+
+    </form>
+</body>
+</html>

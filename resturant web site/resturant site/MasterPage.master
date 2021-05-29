@@ -1,0 +1,255 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8">
+    <title></title>
+<!-- Adsense Code -->
+<script async='async' src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-2656285010301965",
+        enable_page_level_ads: true
+    });
+</script>
+<!-- -->
+
+<!-- MetaTag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="description" content=" Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın" />
+    <meta name="author" content="Najla Odeh">
+    <meta name="keywords" content="Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın " />
+    <meta name="description" content="Lokantamız sayfası bütün yemeklerimiz buradadır istediğiniz yemekler yetrki istek atın  " />
+
+
+    <!-- Google / Search Engine Tags -->
+    <meta itemprop="name" content="  Lokanta_sayfası">
+    <meta itemprop="description" content=" Lokanta sayfası  loknta bütün yemekleri">
+<%--    <meta itemprop="image" content="https://en.wikipedia.org/wiki/Food">--%>
+<%-- 
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://en.wikipedia.org/wiki/Food">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" Loknta sayfası">
+    <meta property="og:description" content=" Bize takip edin en lizeetli yemekler tadırsinız">
+    <meta property="og:image" content="https://en.wikipedia.org/wiki/Food">
+--%> 
+    <!-- Twitter Meta Tags -->
+    <%--<meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content=" Loknta sayfası">
+    <meta name="twitter:description" content="Bize takip edin en lizeetli yemekler tadırsinız">
+    <meta name="twitter:image" content="https://en.wikipedia.org/wiki/Food">--%>
+
+<%--<meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@lokanta_sayfası">
+    <meta name="twitter:creator" content="@lokanta_sayfası">
+     <meta name="twitter:domain" content="lokanta_sayfası.com">--%>
+
+<!-- MetaTag --> 
+
+
+    <!-- styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+ /* table */     
+    .mtbl
+        {
+        -webkit-box-shadow: 0px 0px 55px -5px rgba(0,0,0,0.74);
+        -moz-box-shadow: 0px 0px 55px -5px rgba(0,0,0,0.74);
+        box-shadow: 0px 0px 55px -5px rgba(0,0,0,0.74);
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 10px;
+        }
+/* Button */
+    .bttn {    margin-bottom: 10px;}
+/* img */
+    .blurGrey {
+     -webkit-filter: grayscale(0) blur(0);
+     filter: grayscale(0) blur(0);
+     -webkit-transition: .3s ease-in-out;
+     transition: .3s ease-in-out;
+     }
+     .blurGrey:hover {
+    -webkit-filter: grayscale(15%) blur(1px);
+    filter: grayscale(15%) blur(2px);
+     }
+
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/fav.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/icon-57.png">
+
+    <!-- To show Search Box -->
+		<script type="text/javascript">
+		    function showHideDiv(ele) {
+		        var srcElement = document.getElementById(ele);
+		        if (srcElement != null) {
+		            if (srcElement.style.display == "block") {
+		                srcElement.style.display = 'none';
+		            }
+		            else {
+		                srcElement.style.display = 'block';
+		            }
+		            return false;
+		        }
+		    }
+		</script>
+    <!-- -->
+
+    <!-- Share Button -->
+    <script src="//platform-api.sharethis.com/js/sharethis.js#property=5babcce083d4a800114ea9cc&product=sticky-share-buttons"></script>
+    <!-- -->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand1" href="#" id="top" style="float: left;display: block;padding: 13px 20px 10px;margin-right: -20px;font-weight: 200;color: #b3b1b1;-webkit-transform: translateZ(0);
+            transition: all 9.5s ease-out;" title="Yukarı"><i class="fa fa-arrow-circle-o-up fa-1x" aria-hidden="true"></i>
+</a>
+          <a class="brand" href="index.aspx" style="text-decoration: none;">LOKANTAMIZ SAYFASI</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="lokanta_sayfasi.aspx">Lokanta sayfası </a>
+              </li>
+              <li class="">
+                <a href="aboutUs.aspx"> Site hakkında</a>
+              </li>
+              <li class="">
+                <a href="Privacypolicy.aspx">Özellikler sklıdır </a>
+              </li>
+              
+              <li class="">
+                <a href="visitors.aspx"> Ziyaretçiler haritası</a>
+              </li>
+              <li class="">
+                <a href="Account/lokanta_sayfasi.aspx"> Kayıt girişi</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" id="#top">
+        <h3 style="text-align: center"> Lokantamiza ziyaret edenlere hoşgeldiniz</h3>
+        <p style="margin-bottom: 16px; text-align: center;">
+      lokantamız en güzel yemkleri ve en iyi şeflerimiz desteklenir</p>
+<!-- Adsense Code -->    
+
+<script async="async" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Linkat-top-pal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-2656285010301965"
+     data-ad-slot="3739449634"
+     data-ad-format="link"
+     data-full-width-responsive="true"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- -->
+
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"  > 
+          </asp:ContentPlaceHolder>
+
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+      <div class="table-responsive">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+          </asp:ContentPlaceHolder>
+          </div>
+      </div>
+        <br /><br />
+        <!-- Adsense Code -->    
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2656285010301965"
+     data-ad-slot="1485655534"></ins>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+        <!-- -->
+        <br />
+
+
+<!-- Start of CuterCounter Code -->
+<a href="" target="_blank"><img src="http://www.cutercounter.com/hit.php?id=gvapxok&nd=7&style=52" border="0" alt="website counter"></a>
+<!-- End of CuterCounter Code -->
+
+      <hr>
+
+      <div class="clear"></div>
+
+      <footer>
+        <p style="text-align: center;">Tüm hakkları saklıdır <a href="https://en.wikipedia.org/wiki/Food">Loknta_sayfası</a> &copy; 2021</p>
+      </footer>
+
+
+
+<%--<div id="totoptop" onclick="document.body.scrollTop = document.documentElement.scrollTop = 0;">
+<i class="fa fa-arrow-circle-up fa-2x"></i></div>
+--%>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    </form>
+</body>
+</html>
